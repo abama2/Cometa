@@ -342,3 +342,315 @@
   - type: Storage
     grid:
     - 5,5,11,8
+
+
+#abama
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltSecurityWebbingBlueSpace
+  name: Blue space РПС
+  description: Новейшая разработка учёных НаноТрейзен.
+  components:
+  - type: Sprite
+    sprite: Clothing/Belt/securitywebbing.rsi
+  - type: Clothing
+    sprite: Clothing/Belt/securitywebbing.rsi
+  - type: Item
+    size: Ginormous
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,19,9
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitaArma
+  name: Униформа Армагедона
+  description: Очень бронированная униформа для Армагеддона.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuit/deathsquad.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpsuit/deathsquad.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.5
+
+- type: entity
+  parent: ClothingHeadHardsuitBase
+  id: ClothingHeadHelmetHardsuitArma
+  noSpawn: true
+  name: Шлем отряда армагедона.
+  description: Специальный шлем для отряда Армагеддон.
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Hardsuits/ERThelmets/ertleader.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Hardsuits/ERThelmets/ertleader.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.3
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.05
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.10
+        Slash: 0.10
+        Piercing: 0.10
+        Heat: 0.10
+        Radiation: 0.00
+        Caustic: 0.05
+
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitArma
+  name: Бронескафандр отряда Армагеддон
+  description: Особый бронескафандр отряда Армагеддона.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Hardsuits/deathsquad.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Hardsuits/deathsquad.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.05
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.10
+        Slash: 0.10
+        Piercing: 0.10
+        Heat: 0.10
+        Radiation: 0.00
+        Caustic: 0.05
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitArma
+  - type: Reflect
+    reflectProb: 1
+    reflects:
+      - Energy
+
+- type: entity
+  name: laser gun
+  parent: BaseWeaponBattery
+  id: WeaponPulseRifleArma
+  description: Это оружие используется отрядом Армагеддон.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/pulse_rifle.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Battery/pulse_rifle.rsi
+  - type: Gun
+    fireRate: 13
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: Pulse
+    fireCost: 150
+  - type: Battery
+    maxCharge: 100000
+    startingCharge: 100000
+    price: 300
+
+- type: entity
+  name: Микрореакторная батарея
+  description: Это улучшенная версия маленькой микрореаторной батареи
+  id: PowerCellBigMicroreactor
+  suffix: Full
+  parent: BasePowerCell
+  components:
+    - type: Sprite
+      layers:
+      - map: [ "enum.PowerCellVisualLayers.Base" ]
+        state: microreactor
+      - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+        state: o2
+        shader: unshaded
+    - type: Battery
+      maxCharge: 500
+      startingCharge: 500
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 5 #takes about 5 minutes to charge itself back to full
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingUnderSocksLes
+  name: Лесбиянские носочки
+  description: Время настоящих девушек..
+  components:
+  - type: Sprite
+    sprite: Clothing/Under/Socks/coder.rsi
+  - type: Clothing
+    sprite: Clothing/Under/Socks/coder.rsi
+
+- type: entity
+  parent: MobHuman
+  id: MobHumanSyndicateAgentSS
+  name: abama
+  components:
+  - type: RandomHumanoidAppearance
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      400: Critical
+      500: Dead
+
+- type: entity
+  name: двухклинковый энергитический меч отряда Армагеддон
+  parent: EnergySword
+  id: EnergySwordDoubleArma
+  description: В ответ Командыванию синдиката, ЦК сделали свой двухклинковый энергитический меч.
+  components:
+  - type: Wieldable
+    wieldTime: 0
+  - type: EnergySword
+    litDamageBonus:
+        types:
+            Slash: 18
+            Heat: 18
+            Structural: 40
+            Blunt: -9
+    litDisarmMalus: 0.7
+  - type: MeleeWeapon
+    attackRate: 3
+    angle: 100
+    soundHit:
+      path: /Audio/Weapons/eblade1.ogg
+    damage:
+      types:
+        Blunt: 9
+  - type: Sprite
+    sprite: Objects/Weapons/Melee/e_sword_double.rsi
+    layers:
+      - state: e_sword_double
+      - state: e_sword_double_blade
+        color: "#FFFFFFFF"
+        visible: false
+        shader: unshaded
+        map: [ "blade" ]
+  - type: Item
+    size: 5
+    sprite: Objects/Weapons/Melee/e_sword_double.rsi
+  - type: Reflect
+    enabled: true
+    reflectProb: .75
+    spread: 75
+
+#long content
+- type: listing
+  id: UplinkEmagAgentIDCard
+  name: ЕМАГ в ID карта агента
+  description: Это устройство совмещает в себя и карту агента, и ЕМАГ
+  productEntity: EmagAgentIDCard
+  cost:
+    Telecrystal: 14
+  categories:
+  - UplinkUtility
+
+- type: entity
+  parent: PassengerIDCard
+  id: EmagAgentCard
+  name: ID карта
+  description: Карта, необходимая для доступа в различные области станции.
+  components:
+  - type: Emag
+  - type: LimitedCharges
+  - type: AutoRecharge
+  - type: Sprite
+    sprite: Objects/Misc/id_cards.rsi
+    state: icon
+  - type: AgentIDCard
+    icons:
+    # TODO figure out a better way of doing this.
+    # Probably by adding a bool or icon-category data-field to the icon prototype?
+    - JobIconDetective
+    - JobIconQuarterMaster
+    - JobIconBotanist
+    - JobIconBoxer
+    - JobIconAtmosphericTechnician
+    - JobIconNanotrasen
+    - JobIconPrisoner
+    - JobIconJanitor
+    - JobIconChemist
+    - JobIconStationEngineer
+    - JobIconSecurityOfficer
+    - JobIconChiefMedicalOfficer
+    - JobIconRoboticist
+    - JobIconChaplain
+    - JobIconLawyer
+    - JobIconUnknown
+    - JobIconLibrarian
+    - JobIconCargoTechnician
+    - JobIconScientist
+    - JobIconResearchAssistant
+    - JobIconGeneticist
+    - JobIconClown
+    - JobIconCaptain
+    - JobIconHeadOfPersonnel
+    - JobIconVirologist
+    - JobIconShaftMiner
+    - JobIconPassenger
+    - JobIconChiefEngineer
+    - JobIconBartender
+    - JobIconHeadOfSecurity
+    - JobIconBrigmedic
+    - JobIconMedicalDoctor
+    - JobIconParamedic
+    - JobIconChef
+    - JobIconWarden
+    - JobIconResearchDirector
+    - JobIconMime
+    - JobIconMusician
+    - JobIconReporter
+    - JobIconPsychologist
+    - JobIconMedicalIntern
+    - JobIconTechnicalAssistant
+    - JobIconServiceWorker
+    - JobIconSecurityCadet
+    - JobIconZookeeper
+    - JobIconSeniorPhysician
+    - JobIconSeniorOfficer
+    - JobIconSeniorEngineer
+    - JobIconSeniorResearcher
+  - type: ActivatableUI
+    key: enum.AgentIDCardUiKey.Key
+    inHandsOnly: true
+  - type: UserInterface
+    interfaces:
+      - key: enum.AgentIDCardUiKey.Key
+        type: AgentIDCardBoundUserInterface
+
+#testing
+
+- type: startingGear
+  id: Armagedon
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitaArma
+    back: ClothingBackpackDuffelHolding
+    shoes: ClothingShoesBootsJackSec 
+    outerClothing: ClothingOuterHardsuitArma
+    eyes: ClothingEyesGlassesSecurity
+    id: CentcomPDA
+    gloves: ClothingHandsGlovesCombat
+    ears: ClothingHeadsetCentCom
+    belt: ClothingBeltSecurityWebbingBlueSpace
+    pocket1: Crowbar
+    pocket2: EnergySwordDoubleArma

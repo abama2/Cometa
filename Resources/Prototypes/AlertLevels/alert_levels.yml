@@ -63,3 +63,18 @@
       emergencyLightColor: DarkViolet
       forceEnableEmergencyLights: true
       shuttleTime: 1200
+    arma:
+      announcement: alert-level-arma-announcement
+      selectable: false
+      sound: /Audio/Misc/epsilon.ogg
+      emergencyLightColor: White
+      forceEnableEmergencyLights: true
+      color: White
+      shuttleTime: 1200
+    beta:
+      announcement: alert-level-beta-announcement
+      sound: /Audio/Misc/redalert.ogg
+      emergencyLightColor: Pink
+      forceEnableEmergencyLights: true
+      color: Pink
+      shuttleTime: 600
