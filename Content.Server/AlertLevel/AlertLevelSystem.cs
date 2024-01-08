@@ -187,10 +187,14 @@ public sealed class AlertLevelSystem : EntitySystem
     }
 }
 public sealed class AlertLevelDelayFinishedEvent : EntityEventArgs
-{}
+{
+
+}
 
 public sealed class AlertLevelPrototypeReloadedEvent : EntityEventArgs
-{}
+{
+
+}
 
 public sealed class AlertLevelChangedEvent : EntityEventArgs
 {
