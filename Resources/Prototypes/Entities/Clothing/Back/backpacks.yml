@@ -519,40 +519,68 @@
   id: EnergySwordDoubleArma
   description: В ответ Командыванию синдиката, ЦК сделали свой двухклинковый энергитический меч.
   components:
-  - type: Wieldable
-    wieldTime: 0
   - type: EnergySword
-    litDamageBonus:
+  - type: ItemToggle
+    soundActivate:
+      path: /Audio/Weapons/ebladeon.ogg
+      params:
+        volume: 3
+    soundDeactivate:
+      path: /Audio/Weapons/ebladeoff.ogg
+      params:
+        volume: 3
+  - type: ItemToggleMeleeWeapon
+    activatedSoundOnSwing:
+      path: /Audio/Weapons/eblademiss.ogg
+      params:
+        volume: 3
+        variation: 0.250
+    activatedDamage:
         types:
-            Slash: 18
-            Heat: 18
-            Structural: 40
-            Blunt: -9
-    litDisarmMalus: 0.7
+            Slash: 24
+            Heat: 24
+            Structural: 30
+  - type: ItemToggleActiveSound
+    activeSound:
+      path: /Audio/Weapons/ebladehum.ogg
+      params:
+        volume: 3
+  - type: ItemToggleDisarmMalus
+    activatedDisarmMalus: 0.7
+  - type: Wieldable
   - type: MeleeWeapon
-    attackRate: 3
+    wideAnimationRotation: -135
+    attackRate: 100
     angle: 100
-    soundHit:
-      path: /Audio/Weapons/eblade1.ogg
     damage:
       types:
-        Blunt: 9
+        Blunt: 4.5
   - type: Sprite
     sprite: Objects/Weapons/Melee/e_sword_double.rsi
     layers:
       - state: e_sword_double
       - state: e_sword_double_blade
-        color: "#FFFFFFFF"
+        color: "#FFFFFF"
         visible: false
         shader: unshaded
         map: [ "blade" ]
   - type: Item
-    size: 5
-    sprite: Objects/Weapons/Melee/e_sword_double.rsi
+    size: Small
+    sprite: Objects/Weapons/Melee/e_sword_double-inhands.rsi
   - type: Reflect
-    enabled: true
     reflectProb: .75
     spread: 75
+  - type: UseDelay
+    delay: 1
+  - type: ToggleableLightVisuals
+    spriteLayer: blade
+    inhandVisuals:
+      left:
+      - state: inhand-left-blade
+        shader: unshaded
+      right:
+      - state: inhand-right-blade
+        shader: unshaded
 
 #long content
 - type: listing
