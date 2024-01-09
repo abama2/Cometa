@@ -1151,3 +1151,12 @@
   components:
   - type: Sprite
     state: originmap
+
+- type: entity
+  parent: PosterBase
+  id: PosterMapAbama1
+  name: "Что-то не понятное"
+  description: "На этом изоброжении ничего тольком не расмотреть."
+  components:
+  - type: Sprite
+    state: abama1
