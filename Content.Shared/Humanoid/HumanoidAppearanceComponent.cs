@@ -29,7 +29,7 @@ public sealed partial class HumanoidAppearanceComponent : Component
     public Gender Gender;
 
     [DataField, AutoNetworkedField]
-    public int Age = 18;
+    public int Age = 14;
 
     /// <summary>
     ///     Any custom base layers this humanoid might have. See:

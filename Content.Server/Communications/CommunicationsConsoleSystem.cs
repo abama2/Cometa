@@ -35,9 +35,9 @@ namespace Content.Server.Communications
         [Dependency] private readonly IConfigurationManager _cfg = default!;
         [Dependency] private readonly IAdminLogManager _adminLogger = default!;
 
-        private const int MaxMessageLength = 256;
-        private const int MaxMessageNewlines = 2;
-        private const float UIUpdateInterval = 5.0f;
+        private const int MaxMessageLength = 512;
+        private const int MaxMessageNewlines = 6;
+        private const float UIUpdateInterval = 3.0f;
 
         public override void Initialize()
         {
@@ -268,8 +268,9 @@ namespace Content.Server.Communications
             // allow admemes with vv
             Loc.TryGetString(comp.Title, out var title);
             title ??= comp.Title;
-
-            msg += "\n" + Loc.GetString("comms-console-announcement-sent-by") + " " + author;
+            
+            var now = DateTime.Now.ToString("HH:mm:ss");
+            msg += "\n" + Loc.GetString("comms-console-announcement-sent-by") + " " + author + "\n" + "Сообщение было отправлено в " + now;
             if (comp.Global)
             {
                 _chatSystem.DispatchGlobalAnnouncement(msg, title, announcementSound: comp.Sound, colorOverride: comp.Color);

@@ -161,7 +161,7 @@ public sealed class AlertLevelSystem : EntitySystem
 
         // The full announcement to be spat out into chat.
         var now = DateTime.Now.ToString("HH:mm:ss");
-        var announcementFull = Loc.GetString("alert-level-announcement", ("name", name), ("announcement", announcement)) + "\n" + now;
+        var announcementFull = Loc.GetString("alert-level-announcement", ("name", name), ("announcement", announcement)) + "\n" + "Код угроозы был приянт в " + now;
 
         var playDefault = false;
         if (playSound)
