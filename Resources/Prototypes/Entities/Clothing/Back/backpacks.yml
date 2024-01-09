@@ -582,17 +582,6 @@
       - state: inhand-right-blade
         shader: unshaded
 
-#long content
-- type: listing
-  id: UplinkEmagAgentIDCard
-  name: ЕМАГ в ID карта агента
-  description: Это устройство совмещает в себя и карту агента, и ЕМАГ
-  productEntity: EmagAgentIDCard
-  cost:
-    Telecrystal: 14
-  categories:
-  - UplinkUtility
-
 - type: entity
   parent: PassengerIDCard
   id: EmagAgentCard
