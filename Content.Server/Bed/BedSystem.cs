@@ -47,6 +47,7 @@ namespace Content.Server.Bed
                 Dirty(uid, component);
                 return;
             }
+            RemComp<HealOnBuckleHealingComponent>(uid);
         }
 
         public override void Update(float frameTime)
