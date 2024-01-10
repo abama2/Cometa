@@ -353,9 +353,9 @@
   description: Новейшая разработка учёных НаноТрейзен.
   components:
   - type: Sprite
-    sprite: Clothing/Belt/securitywebbing.rsi
+    sprite: Clothing/Belt/BlueSpaceRPS.rsi
   - type: Clothing
-    sprite: Clothing/Belt/securitywebbing.rsi
+    sprite: Clothing/Belt/BlueSpaceRPS.rsi
   - type: Item
     size: Ginormous
   - type: Storage
