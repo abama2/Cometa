@@ -47,10 +47,6 @@ namespace Content.Server.Bed
                 Dirty(uid, component);
                 return;
             }
-
-            _actionsSystem.RemoveAction(args.BuckledEntity, component.SleepAction);
-            _sleepingSystem.TryWaking(args.BuckledEntity);
-            RemComp<HealOnBuckleHealingComponent>(uid);
         }
 
         public override void Update(float frameTime)
