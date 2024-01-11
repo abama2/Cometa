@@ -21,7 +21,7 @@ public sealed partial class SleepingComponent : Component
     /// </summary>
     [DataField("cooldown")]
     [ViewVariables(VVAccess.ReadWrite)]
-    public TimeSpan Cooldown = TimeSpan.FromSeconds(1f);
+    public TimeSpan Cooldown = TimeSpan.FromSeconds(0.5f);
 
     [DataField("cooldownEnd", customTypeSerializer:typeof(TimeOffsetSerializer))]
     public TimeSpan CoolDownEnd;
