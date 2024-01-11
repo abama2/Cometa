@@ -1448,3 +1448,26 @@
     sprite: Clothing/Uniforms/Jumpsuit/familiar_garbs.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/familiar_garbs.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBDSMF
+  name: Костюм БДСМ для девушек
+  description: in progress.
+  components:
+  - type: Sprite
+    sprite: Clothing\abama\BDSMF.rsi
+  - type: Clothing
+    sprite: Clothing\abama\BDSMF.rsi
+
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBDSMM
+  name: Костюм БДСМ для мужиков
+  description: in progress.
+  components:
+  - type: Sprite
+    sprite: Clothing\abama\BDSMM.rsi
+  - type: Clothing
+    sprite: Clothing\abama\BDSMM.rsi
