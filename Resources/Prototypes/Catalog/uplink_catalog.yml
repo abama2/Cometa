@@ -1410,6 +1410,26 @@
   - UplinkPointless
 
 - type: listing
+  id: UplinkBDSMM
+  name: uplink-BDSMM-name
+  description: uplink-BDSMM-desc
+  productEntity: ClothingUniformJumpsuitBDSMM
+  cost:
+    Telecrystal: 20
+  categories:
+  - UplinkPointless
+
+- type: listing
+  id: UplinkBDSMF
+  name: uplink-BDSMF-name
+  description: uplink-BDSMF-desc
+  productEntity: ClothingUniformJumpsuitBDSMF
+  cost:
+    Telecrystal: 28
+  categories:
+  - UplinkPointless
+
+- type: listing
   id: UplinkOutlawHat
   name: uplink-outlaw-hat-name
   description: uplink-outlaw-hat-desc
