@@ -16,7 +16,7 @@ namespace Content.Client.Arcade
         private readonly Label _playerActionLabel;
         private readonly Label _enemyActionLabel;
 
-        private readonly Button[] _gameButtons = new Button[3]; //used to disable/enable all game buttons
+        private readonly Button[] _gameButtons = new Button[4]; //used to disable/enable all game buttons
         public SpaceVillainArcadeMenu(SpaceVillainArcadeBoundUserInterface owner)
         {
             MinSize = SetSize = new Vector2(300, 225);
@@ -53,17 +53,23 @@ namespace Content.Client.Arcade
             };
             buttonGrid.AddChild(_gameButtons[0]);
 
-            _gameButtons[1] = new ActionButton(Owner, SharedSpaceVillainArcadeComponent.PlayerAction.Heal)
+            _gameButtons[1] = new ActionButton(Owner, SharedSpaceVillainArcadeComponent.PlayerAction.SuperAttack)
             {
-                Text = Loc.GetString("spacevillain-menu-button-heal")
+                Text = Loc.GetString("spacevillain-menu-button-super-attack")
             };
             buttonGrid.AddChild(_gameButtons[1]);
 
-            _gameButtons[2] = new ActionButton(Owner, SharedSpaceVillainArcadeComponent.PlayerAction.Recharge)
+            _gameButtons[2] = new ActionButton(Owner, SharedSpaceVillainArcadeComponent.PlayerAction.Heal)
+            {
+                Text = Loc.GetString("spacevillain-menu-button-heal")
+            };
+            buttonGrid.AddChild(_gameButtons[2]);
+
+            _gameButtons[3] = new ActionButton(Owner, SharedSpaceVillainArcadeComponent.PlayerAction.Recharge)
             {
                 Text = Loc.GetString("spacevillain-menu-button-recharge")
             };
-            buttonGrid.AddChild(_gameButtons[2]);
+            buttonGrid.AddChild(_gameButtons[3]);
 
             centerContainer = new CenterContainer();
             centerContainer.AddChild(buttonGrid);

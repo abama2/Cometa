@@ -76,6 +76,7 @@ public sealed partial class SpaceVillainArcadeSystem : EntitySystem
         switch (msg.PlayerAction)
         {
             case PlayerAction.Attack:
+            case PlayerAction.SuperAttack:
             case PlayerAction.Heal:
             case PlayerAction.Recharge:
                 component.Game.ExecutePlayerAction(uid, msg.PlayerAction, component);

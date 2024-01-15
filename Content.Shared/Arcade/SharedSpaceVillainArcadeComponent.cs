@@ -21,6 +21,7 @@ namespace Content.Shared.Arcade
         public enum PlayerAction
         {
             Attack,
+            SuperAttack,
             Heal,
             Recharge,
             NewGame,

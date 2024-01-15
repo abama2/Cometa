@@ -94,7 +94,7 @@ public sealed class CluwneSystem : EntitySystem
         if (_robustRandom.Prob(component.GiggleRandomChance))
         {
             _audio.PlayPvs(component.SpawnSound, uid);
-            _chat.TrySendInGameICMessage(uid, "honks", InGameICChatType.Emote, ChatTransmitRange.Normal);
+            _chat.TrySendInGameICMessage(uid, "хонк", InGameICChatType.Emote, ChatTransmitRange.Normal);
         }
 
         else if (_robustRandom.Prob(component.KnockChance))

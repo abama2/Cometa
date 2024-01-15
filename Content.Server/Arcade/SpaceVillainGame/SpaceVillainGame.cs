@@ -108,6 +108,20 @@ public sealed partial class SpaceVillainGame
                     VillainChar.Hp -= attackAmount;
                 _turtleTracker -= _turtleTracker > 0 ? 1 : 0;
                 break;
+            case PlayerAction.SuperAttack:
+                var pointAmount2 = _random.Next(2, 4);
+                var superAttackAmount = _random.Next(7, 10);
+                _latestPlayerActionMessage = Loc.GetString(
+                    "space-villain-game-player-super-attack-message",
+                    ("enemyName", _villainName),
+                    ("superAttackAmount", superAttackAmount)
+                );
+                _audioSystem.PlayPvs(arcade.PlayerAttackSound, uid, AudioParams.Default.WithVolume(-4f));
+                if (!VillainChar.Invincible)
+                    VillainChar.Hp -= superAttackAmount;
+                    PlayerChar.Mp -= pointAmount2;
+                _turtleTracker -= _turtleTracker > 0 ? 1 : 0;
+                break;
             case PlayerAction.Heal:
                 var pointAmount = _random.Next(1, 3);
                 var healAmount = _random.Next(6, 8);

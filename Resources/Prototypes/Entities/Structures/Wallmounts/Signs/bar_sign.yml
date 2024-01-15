@@ -211,6 +211,8 @@
   components:
   - type: BarSign
     current: Goose
+  - type: PointLight
+    color: "#FF00FF"
 
 - type: entity
   parent: BaseBarSign
@@ -220,6 +222,8 @@
   components:
   - type: BarSign
     current: TheNet
+  - type: PointLight
+    color: "#7B917B"
 
 - type: entity
   parent: BaseBarSign
@@ -229,6 +233,8 @@
   components:
   - type: BarSign
     current: TheOuterSpess
+  - type: PointLight
+    color: "#3BB08F"
 
 - type: entity
   parent: BaseBarSign
@@ -238,6 +244,8 @@
   components:
   - type: BarSign
     current: TheSingulo
+  - type: PointLight
+    color: "#943391"
 
 - type: entity
   parent: BaseBarSign
@@ -247,6 +255,8 @@
   components:
   - type: BarSign
     current: TheSun
+  - type: PointLight
+    color: "#C5A611"
 
 - type: entity
   parent: BaseBarSign
@@ -256,6 +266,8 @@
   components:
   - type: BarSign
     current: WiggleRoom
+  - type: PointLight
+    color: "#C71585"
 
 - type: entity
   parent: BaseBarSign
@@ -265,6 +277,8 @@
   components:
   - type: BarSign
     current: Zocalo
+  - type: PointLight
+    color: "#1164B4"
 
 - type: entity
   parent: BaseBarSign
@@ -274,6 +288,8 @@
   components:
   - type: BarSign
     current: Emprah
+  - type: PointLight
+    color: "#4CBB17"
 
 - type: entity
   parent: BaseBarSign
@@ -283,3 +299,5 @@
   components:
   - type: BarSign
     current: Spacebucks
+  - type: PointLight
+    color: "#3D642D"

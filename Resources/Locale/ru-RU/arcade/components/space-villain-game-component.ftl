@@ -1,6 +1,7 @@
-## SpaceVillainGame
+## SpaceVillainGame СУПЕР АТАКА
 
 space-villain-game-player-attack-message = Вы атакуете { $enemyName } на { $attackAmount } урона!
+space-villain-game-player-super-attack-message = Вы используете супер атаку, атаковав { $enemyName } на { $superAttackAmount } урона!
 space-villain-game-player-heal-message = Вы используете { $magicPointAmount } магии, чтобы исцелить { $healAmount } урона!
 space-villain-game-player-recharge-message = Вы набираете { $regainedPoints } очков
 space-villain-game-player-wins-message = Вы победили!
