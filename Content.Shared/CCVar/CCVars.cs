@@ -1563,7 +1563,7 @@ namespace Content.Shared.CCVar
             CVarDef.Create("chat.rate_limit_announce_admins_delay", 15, CVar.SERVERONLY);
 
         public static readonly CVarDef<int> ChatMaxMessageLength =
-            CVarDef.Create("chat.max_message_length", 1000, CVar.SERVER | CVar.REPLICATED);
+            CVarDef.Create("chat.max_message_length", 2000, CVar.SERVER | CVar.REPLICATED);
 
         public static readonly CVarDef<bool> ChatSanitizerEnabled =
             CVarDef.Create("chat.chat_sanitizer_enabled", true, CVar.SERVERONLY);
