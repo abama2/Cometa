@@ -1,4 +1,11 @@
 - type: department
+  id: Central_Command
+  description: department-Central-Command-description
+  color: "#9FED58"
+  roles:
+  - CentralCommandOfficial
+
+- type: department
   id: Cargo
   description: department-Cargo-description
   color: "#A46106"

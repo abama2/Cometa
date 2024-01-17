@@ -6,3 +6,4 @@ department-Medical-description = Поддерживайте здоровье э�
 department-Security-description = Поддерживайте порядок на станции.
 department-Science-description = Изучайте новые технологии и опасные артефакты.
 department-Specific-description = Должности, которые есть не на всех станциях.
+department-Central-Command-description = #
