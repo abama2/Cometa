@@ -43980,6 +43980,13 @@ entities:
       type: Transform
     - location: Centcomm
       type: WarpPoint
+- proto: SpawnPointCentcomm
+  entities:
+  - uid: 7312
+    components:
+    - pos: 0.5,0.5
+      parent: 1668
+      type: Transform
 - proto: WaterCooler
   entities:
   - uid: 5318

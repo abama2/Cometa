@@ -403,6 +403,7 @@
     earliestStart: 50
     weight: 5
     duration: 1
+    minimumPlayers: 10
   - type: ZombieRule
     minStartDelay: 0 #let them know immediately
     maxStartDelay: 10

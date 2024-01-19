@@ -18,12 +18,20 @@
   setPreference: false
   startingGear: CentcomGear
   icon: "JobIconNanotrasen"
+  requireAdminNotify: true
+  joinNotifyCrew: true
   supervisors: job-supervisors-centcom # Corvax-JobSupervisors
   canBeAntag: false
   accessGroups:
   - AllAccess
   access:
   - CentralCommand
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
 
 - type: startingGear
   id: CentcomGear

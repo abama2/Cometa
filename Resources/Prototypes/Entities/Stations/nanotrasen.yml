@@ -31,6 +31,8 @@
 - type: entity
   id: NanotrasenCentralCommand
   parent:
+    - BaseStationJobsSpawning
+    - BaseStationShuttles
     - BaseStation
     - BaseStationAlertLevels
     - BaseStationNanotrasen

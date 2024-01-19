@@ -595,3 +595,15 @@
     layers:
       - state: green
       - state: zookeeper
+
+- type: entity
+  id: SpawnPointCentcomm
+  parent: SpawnPointJobBase
+  name: centcomm
+  components:
+  - type: SpawnPoint
+    job_id: CentralCommandOfficial
+  - type: Sprite
+    layers:
+      - state: green
+      - state: zookeeper

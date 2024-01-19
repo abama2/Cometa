@@ -1,5 +1,5 @@
 - type: department
-  id: Central_Command
+  id: CentralCommand
   description: department-Central-Command-description
   color: "#9FED58"
   roles:
@@ -13,6 +13,7 @@
   - CargoTechnician
   - Quartermaster
   - SalvageSpecialist
+  - CentralCommandOfficial
 
 - type: department
   id: Civilian
