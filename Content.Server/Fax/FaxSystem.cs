@@ -441,12 +441,16 @@ public sealed class FaxSystem : EntitySystem
         if (!TryComp<MetaDataComponent>(sendEntity, out var metadata) ||
             !TryComp<PaperComponent>(sendEntity, out var paper))
             return;
-
+        var now = DateTime.Now.ToString("HH:mm:ss");
+        string[] names = {"Капитан ЕРП", "Твой раб", "Твой хозяин", "11100100 10100000 10101101 11101000 10001010 10010000", "Киберсан", "ERROR 404"};
+        Random random = new Random();
+        int randomIndex = random.Next(0, names.Length);
+        string randomname = names[randomIndex];
         var payload = new NetworkPayload()
         {
             { DeviceNetworkConstants.Command, FaxConstants.FaxPrintCommand },
             { FaxConstants.FaxPaperNameData, metadata.EntityName },
-            { FaxConstants.FaxPaperContentData, paper.Content },
+            { FaxConstants.FaxPaperContentData, paper.Content + Environment.NewLine +  "Отправлено в: " + now + Environment.NewLine + "Факсом по имени " + randomname},
         };
 
         if (metadata.EntityPrototype != null)
